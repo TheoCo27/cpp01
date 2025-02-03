@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: theog <theog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/03 17:43:43 by theog             #+#    #+#             */
-/*   Updated: 2025/02/03 19:20:59 by theog            ###   ########.fr       */
+/*   Created: 2025/02/03 19:08:00 by theog             #+#    #+#             */
+/*   Updated: 2025/02/03 19:22:58 by theog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* newZombie( std::string name)
+Zombie*    zombieHorde( int N, std::string name )
 {
-    Zombie *zombie = new(std::nothrow) Zombie(name);
-    if (!zombie)
+    Zombie *z_tab = new(std::nothrow) Zombie[N];
+
+    if (!z_tab)
         return (NULL);
-    return (zombie);
+    for (int i = 0; i < N; i++)
+        z_tab[i].set_name(name);
+    return (z_tab);
 }

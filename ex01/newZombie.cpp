@@ -6,7 +6,7 @@
 /*   By: theog <theog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:43:43 by theog             #+#    #+#             */
-/*   Updated: 2025/02/03 19:20:59 by theog            ###   ########.fr       */
+/*   Updated: 2025/02/03 18:06:36 by theog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 Zombie* newZombie( std::string name)
 {
-    Zombie *zombie = new(std::nothrow) Zombie(name);
-    if (!zombie)
-        return (NULL);
+    Zombie *zombie = new Zombie(name);
     return (zombie);
 }
