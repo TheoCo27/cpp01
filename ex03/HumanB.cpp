@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: theog <theog@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tcohen <tcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 21:13:08 by theog             #+#    #+#             */
-/*   Updated: 2025/02/04 00:45:32 by theog            ###   ########.fr       */
+/*   Updated: 2025/02/04 17:14:57 by tcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 
 HumanB::HumanB(std::string your_name)
-    : weapon(*(new Weapon()))
+    : name(your_name), weapon(NULL)
 {
-    name = your_name;
+    return;
 }
 void HumanB::attack(void)
 {
-    std::cout << name << " attacks with their " << weapon.getType() << std::endl;
+	if (weapon == NULL)
+	{
+	    std::cout << name << " attacks with no weapon " << std::endl;
+
+		return;
+	}
+    std::cout << name << " attacks with their " << weapon->getType() << std::endl;
 }
 void HumanB::set_name(std:: string your_name)
 {
@@ -32,9 +38,9 @@ const std::string& HumanB::get_name(void) const
 }
 void HumanB::setWeapon(Weapon& your_weapon)
 {
-    weapon = your_weapon;
+    weapon = &your_weapon;
 }
 const Weapon& HumanB::get_weapon(void) const
 {
-    return (weapon);
+    return (*weapon);
 }

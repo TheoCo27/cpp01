@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: theog <theog@student.42.fr>                +#+  +:+       +#+         #
+#    By: tcohen <tcohen@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/03 18:13:56 by theog             #+#    #+#              #
-#    Updated: 2025/02/03 18:14:09 by theog            ###   ########.fr        #
+#    Updated: 2025/02/04 17:05:26 by tcohen           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = zombie
 
 # Fichiers sources
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp zombieHorde.cpp
 
 # Dossier pour les fichiers objets
 OBJDIR = obj
