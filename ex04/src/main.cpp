@@ -6,7 +6,7 @@
 /*   By: theog <theog@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 17:22:33 by tcohen            #+#    #+#             */
-/*   Updated: 2025/02/05 00:38:44 by theog            ###   ########.fr       */
+/*   Updated: 2025/02/05 00:50:54 by theog            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,19 @@ std::string replace_occurence(std::string& line, std::string s1, std::string s2)
 		line.insert(i_occ, s2);
 	}
 	return (line);
+}
+
+bool check_args(char *argv)
+{
+	int i = 0;
+	int j = 0;
+	while(argv[i])
+	{
+		//check_empty
+		//check_whitespace
+		//checkisprint
+	}
+	
 }
 
 int main(int argc, char **argv)
