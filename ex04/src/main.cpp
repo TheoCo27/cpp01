@@ -6,7 +6,7 @@
 /*   By: tcohen <tcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 17:22:33 by tcohen            #+#    #+#             */
-/*   Updated: 2025/02/04 20:48:37 by tcohen           ###   ########.fr       */
+/*   Updated: 2025/02/04 21:05:46 by tcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 	{
 		if (line.compare(argv[2]) == 0)
 		{
-			outfile << argv[3];
+			outfile << argv[3] << std::endl;
 			continue;
 		}
 		outfile << line << std::endl;
