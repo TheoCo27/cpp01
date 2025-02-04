@@ -6,10 +6,13 @@
 /*   By: tcohen <tcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 17:28:30 by tcohen            #+#    #+#             */
-/*   Updated: 2025/02/04 17:30:36 by tcohen           ###   ########.fr       */
+/*   Updated: 2025/02/04 20:25:48 by tcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef __REPLACER_HPP__
+#define __REPLACER_HPP__
 #include <iostream>
+#include <fstream>
 
-std::string chips = 0;
+#endif
