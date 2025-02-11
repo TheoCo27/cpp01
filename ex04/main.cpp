@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: theog <theog@student.42.fr>                +#+  +:+       +#+        */
+/*   By: tcohen <tcohen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 17:22:33 by tcohen            #+#    #+#             */
-/*   Updated: 2025/02/05 14:15:18 by theog            ###   ########.fr       */
+/*   Updated: 2025/02/11 20:29:03 by tcohen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int main(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cout << "Error\n need ./replacer <filename> <s1_to_replace> <s2_replace_with>" << std::endl;
+		std::cout << "Error\nNeed ./replacer <filename> <s1_to_replace> <s2_replace_with>" << std::endl;
 		return (1);
 	}
 	if (check_args(argv) == 1)
@@ -75,7 +75,7 @@ int main(int argc, char **argv)
 		return (1); 
 	}
 	std::string outfile_name = std::string(argv[1]) + ".replace";
-	std::ofstream outfile(outfile_name, std::ios::trunc);
+	std::ofstream outfile(outfile_name.c_str(), std::ios::trunc);
 	if (outfile.fail())
 	{
 		std::cout << "Error\nCannot open file " << outfile_name << std::endl;
